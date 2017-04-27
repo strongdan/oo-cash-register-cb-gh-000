@@ -9,12 +9,7 @@ class CashRegister
 
   attr_accessor :total, :discount, :last_trans_amount, :items
 
-  def items
-    self.items
-  end
-
   def add_item(title, price, quantity=nil)
-    self.items << title
     previous = @total
     if quantity != nil
       @total += price * quantity
@@ -22,6 +17,4 @@ class CashRegister
       @total += price
     end
   end
-
-
 end
